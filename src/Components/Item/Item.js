@@ -8,7 +8,7 @@ const Item = ({ item }) => {
 // Button Handle
 const navigate = useNavigate();
 
-const addHandleButton = (id) =>{
+const addHandleButton = id =>{
 
     navigate(`/quiz/${id}`);
 }
@@ -22,7 +22,7 @@ const addHandleButton = (id) =>{
   
   <span class="relative animate-spin rounded-full inline-flex   bg-red-700 text-white">Top</span>
 </span>
-            <div className="card w-96  bg-white shadow-xl">
+            <div className="card w-96  bg-gradient-to-r from-cyan-200 to-gray-200 bg-white shadow-xl">
   <figure><img src={logo} alt="Shoes" /></figure>
   <div className="card-body">
     <h2 className="card-title">
