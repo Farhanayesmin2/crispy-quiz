@@ -5,7 +5,7 @@ import Topic from '../Topic/Topic';
 const AllQuiz = () => {
     const allQuiz = useLoaderData();
 
-    console.log(allQuiz.data.questions);
+    console.log(allQuiz.options);
 
     return (
         <div>
@@ -14,6 +14,7 @@ const AllQuiz = () => {
                  allQuiz.data.questions.map(topic => <Topic topic={topic}></Topic>)
                
             }
+            
              
         </div>
     );
