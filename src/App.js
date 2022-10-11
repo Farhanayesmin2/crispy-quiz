@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import { BeakerIcon } from '@heroicons/react/24/solid'
+import Header from './Components/Header/Header';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<Header></Header>
+
+
+      <h1 className='bg-red-300'> Assalamu alaikum.</h1>
+      <h1 class="text-3xl font-bold underline">
+        Hello world!
+        
+      </h1>
+      <button className="btn ">Button</button>
+      <button className='btn btn-disabled btn-red-300'>Crispy Quiz</button>
+      <div> <BeakerIcon className="h-6 w-6 text-blue-500"/></div>
     </div>
   );
 }
