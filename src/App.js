@@ -2,20 +2,53 @@
 import './App.css';
 import { BeakerIcon } from '@heroicons/react/24/solid'
 import Header from './Components/Header/Header';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Main from './Layout/Main';
+import NotFoundPage from './Components/NotFoundPage/NotFoundPage';
+import Home from './Components/Home/Home';
+import Statistics from './Components/Statistics/Statistics';
+import Question from './Components/Question/Question';
 function App() {
+
+  const  router  = createBrowserRouter([
+
+    {
+      path: '/',
+      element: <Main></Main>,
+      children: [
+        {
+          path: 'home',
+          element: <Home></Home>,
+        },
+        {
+          path: 'statistics',
+          element: <Statistics></Statistics>,
+        },
+        {
+          path: 'quiz',
+          element: <Main></Main>,
+        },
+        {
+          path: 'blog',
+          element: <Question></Question>
+        },
+      ]
+    },
+    {
+      path: '*',
+      element: <NotFoundPage></NotFoundPage>,
+    },
+    
+
+  ])
+
   return (
+
+    
     <div className="App">
-<Header></Header>
 
-
-      <h1 className='bg-red-300'> Assalamu alaikum.</h1>
-      <h1 class="text-3xl font-bold underline">
-        Hello world!
-        
-      </h1>
-      <button className="btn ">Button</button>
-      <button className='btn btn-disabled btn-red-300'>Crispy Quiz</button>
-      <div> <BeakerIcon className="h-6 w-6 text-blue-500"/></div>
+<RouterProvider router={router}></RouterProvider>
+     
     </div>
   );
 }
