@@ -1,8 +1,21 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Item = ({ item }) => {
-    const { name, logo, total } = item;
+    const { name, logo, total,id } = item;
     console.log(item);
+
+// Button Handle
+const navigate = useNavigate();
+
+const addHandleButton = (id) =>{
+
+    navigate(`/quiz/${id}`);
+}
+
+
+
+
     return (
         <div>
             <span class="flex ">
@@ -18,7 +31,7 @@ const Item = ({ item }) => {
     </h2>
     <p>Choose Me Please!!!</p>
     <div className="card-actions justify-end">
-                        <button className="btn btn-outline btn-success w-full">Start Quiz</button>
+                        <button onClick={() => addHandleButton(id)} className="btn btn-outline btn-success w-full">Start Quiz</button>
     </div>
   </div>
 </div>
