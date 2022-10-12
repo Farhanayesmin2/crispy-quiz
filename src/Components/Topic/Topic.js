@@ -1,4 +1,4 @@
-import { CheckCircleIcon, EyeIcon, QuestionMarkCircleIcon } from '@heroicons/react/24/solid';
+import {  EyeIcon, QuestionMarkCircleIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 
 
@@ -15,15 +15,23 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Topic = ({ topic }) => {
 
-
-
-    const { question, logo, correctAnswer, option } = topic;
-    console.log(topic.options);
+    const { question,  correctAnswer, options } = topic;
+    console.log(options);
+    console.log(correctAnswer);
  
     const questions = question.split('<p>', 2);
     const notify = () => toast.success(correctAnswer);
         
-      
+    const rightAnswer = (answer) => {
+            if (answer === correctAnswer) {
+                toast.success('Answer Is Correct', { autoClose: 500 });
+            
+            }
+            else {
+                toast.warn('Opps,Wrong Answer', { autoClose: 500 });
+          
+            }
+        }
 
     return (
         <div>
@@ -37,27 +45,24 @@ const Topic = ({ topic }) => {
                            
           <div className='grid grid-cols-2 text-start gap-5'>
             {
-                topic.options.map(answer => <div className='flex items-center px-12 '
-                >  <input type="radio" name="radio-4" className="radio radio-accent text-xl font-extralight" checked />{answer}</div>)   
+                topic.options.map(answer =>  <div className='flex items-center px-12 '
+                >  <input type="radio" name="radio-4" className="radio radio-accent text-xl font-extralight" onClick={()=>rightAnswer(answer)} checked />{answer}</div>
+                )   
         }
-            </div>   
-                     
-                   
-   </div>
-    <div className="card-actions justify-end">
+            </div>          
+            </div>
+                   <div className="card-actions justify-end">
                         <button onClick={notify}><EyeIcon className=' h-8 w-8 hover:text-indigo-600 text-purple-300 '></EyeIcon>  </button> 
                         <ToastContainer 
-                     
                         autoClose={5000}
                         className="pt-10  text-center"
-                        
-                        
-                        
                         />                 
     </div>
   </div>
 </div>
-
+            {
+                
+            }
         </div>
     );
 };
