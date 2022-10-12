@@ -4,7 +4,7 @@ import './Header.css';
 const Header = () => {
     return (
         <div>
-            <div className="navbar bg-gradient-to-r from-cyan-200 to-gray-200 shadow-lg md:container md:mx-auto">
+            <div className="navbar sm:py-12 lg:py-5 bg-gradient-to-r from-cyan-200 to-gray-200 shadow-lg md:container md:mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -16,8 +16,8 @@ const Header = () => {
         <li><a>About</a></li>
       </ul>
     </div>
-    <div className="navbar-start">
-    <a className="btn btn-ghost normal-case text-3xl font-mono px-5 text-emerald-900"> <span className=' '> <strong className='text-4xl font-bolder text-indigo-900'>C</strong>rispy</span><strong className='text-4xl text-indigo-900 font-bolder '>Q</strong>uiz</a>
+    <div className="navbar-start ">
+    <a className="btn btn-ghost normal-case text-2xl pl-0 pr-5 font-mono  text-emerald-900"> <span className=' '> <strong className='text-4xl font-bolder text-indigo-900'>C</strong>rispy</span><strong className='text-4xl text-indigo-900 font-bolder '>Q</strong>uiz</a>
   </div>
   </div>
  
