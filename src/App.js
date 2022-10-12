@@ -9,9 +9,9 @@ import Home from './Components/Home/Home';
 import Statistics from './Components/Statistics/Statistics';
 import Question from './Components/Question/Question';
 import Quiz from './Components/Quiz/Quiz';
-import Topic from './Components/Topic/Topic';
+
 import AllQuiz from './Components/AllQuiz/AllQuiz';
-import Rechart from './Components/Rechart/Rechart';
+
 function App() {
 
   const  router  = createBrowserRouter([
@@ -52,7 +52,7 @@ function App() {
           loader: async () => {
             return fetch('https://openapi.programming-hero.com/api/quiz');
           },
-          element: <Rechart></Rechart>,
+          element: <Statistics></Statistics>,
         },
         
         {
