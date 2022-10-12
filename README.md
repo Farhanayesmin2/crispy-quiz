@@ -1,3 +1,19 @@
+# Live Site Link
+
+Hosted in Netlify []
+
+## Resources & credits
+
+Tailwind Componts -> [Daisy Ui] ("https://daisyui.com");
+Tailwind Components ->[Tailwind Css] ("https://tailwindcss.com/");
+Rechart Component -> [Rechart Org] ("https://recharts.org/en-US/");
+
+### React Route
+
+React route -> Site Link: https://reactrouter.com/en/main
+
+### "npm run build"
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
