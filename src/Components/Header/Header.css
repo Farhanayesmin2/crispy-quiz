@@ -1,0 +1,8 @@
+.activeClassName{
+    background-color: rgb(188, 209, 216);
+ color: blue;
+ padding: 2px;
+}
+.nav-link{
+    padding-right: 15px;
+}

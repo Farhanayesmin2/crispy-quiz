@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import {  NavLink } from 'react-router-dom';
+import './Header.css';
 const Header = () => {
     return (
         <div>
@@ -21,11 +21,26 @@ const Header = () => {
   </div>
   </div>
  
-  <div className="navbar-end text-lg font-serif font-bold text-emerald-900">
-<Link className='px-2' to='home'>Home</Link>
-<Link className='px-2' to='quiz'>Quiz</Link>
-<Link className='px-2' to='statistics'>Statistics</Link>
-<Link className='px-3' to='blog'>Blog</Link>
+          <div className="navbar-end text-lg font-serif font-bold text-emerald-900">
+            <div className='nav-link'>
+            <NavLink   className={({ isActive }) =>
+              isActive ? 'activeClassName' : undefined
+            }           to='home'>Home</NavLink>
+            </div>
+            <div className='nav-link'>
+            <NavLink className={({ isActive }) =>
+              isActive ? 'activeClassName' : undefined
+            } to='quiz'>Quiz</NavLink>    
+           </div>
+            <div className='nav-link'>
+            <NavLink className={({ isActive }) =>
+              isActive ? 'activeClassName' : undefined
+            } to='statistics'>Statistics</NavLink>
+            </div>
+
+             <NavLink className={({ isActive }) =>
+              isActive ? 'activeClassName' : undefined
+            } to='blog'>Blog</NavLink>
                     
 
 
