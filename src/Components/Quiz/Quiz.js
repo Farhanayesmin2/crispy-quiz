@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Item from '../Item/Item';
+import Statistics from '../Statistics/Statistics';
 
 const Quiz = () => {
     const quiz = useLoaderData();
@@ -17,7 +18,9 @@ const Quiz = () => {
                 
             <div className='grid gap-12 row-gap-12 md:col-gap-12 my-6   md:grid-cols-3 ms-12 '>
             {
-               quizes.map(item => <Item  item={item} ></Item>)
+                        quizes.map(item => <Item item={item} ></Item>         
+                            
+                        )
                 }
               
             </div>
